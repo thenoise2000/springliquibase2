@@ -1,0 +1,21 @@
+# Application Properties
+spring:
+  application:
+    name: Liquibase Demo
+  # Jpa Properties
+  datasource:
+    #url: jdbc:mysql://localhost:3306/liquibasedemo?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/liquibase2?serverTimezone=UTC
+    username: root
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  # Liquibase properties
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+## Server Properties
+server:
+  port: 8080
